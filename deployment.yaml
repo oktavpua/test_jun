@@ -1,0 +1,18 @@
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 1  # Количество реплик, в данном случае 1
+  selector:
+    matchLabels:
+      app: nginx  # Метка, по которой Deployment ищет поды
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:stable  # Используем образ nginx с тегом stable
+        ports:
+        - containerPort: 80  # Открываем порт 80 внутри контейнера
