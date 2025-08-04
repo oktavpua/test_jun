@@ -1,0 +1,10 @@
+# Описание этапов пайплайна
+stages:
+  - test
+
+# Задача для выполнения проверки nginx на этапе test
+test_nginx:
+  stage: test
+  # Проверяем, где расположен бинарный файл nginx и выводим его версию
+  script:
+    - which nginx && nginx -v
