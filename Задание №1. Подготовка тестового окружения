@@ -16,3 +16,4 @@ ss -ntulp | grep nginx
 ip a
 
 # Открываем в браузере адрес: 192.168.1.117 и видим приветственную страницу nginx (Welcome to nginx!)
+# Или локально утилитой curl: curl http://localhost
